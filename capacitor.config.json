@@ -1,0 +1,11 @@
+{
+  "appId": "com.testnotifications.testnotifications",
+  "appName": "test-notifications",
+  "webDir": "src",
+  "bundledWebRuntime": true,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

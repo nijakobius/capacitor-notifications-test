@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+</head>
+<body>
+
+<script type="text/javascript">
+
+  Capacitor.Plugins.LocalNotifications.createChannel({
+    id: '1',
+    name: 'channel_name',
+    description: 'channel_description',
+    importance : 5,
+    visibility: 1,
+    vibration: true,
+  }).then(() => Capacitor.Plugins.LocalNotifications.schedule({notifications: [{
+    channelId: '1',
+    id: 0,
+    title: 'notification_title',
+    body: 'notification_body',
+    schedule : {at: new Date(Date.now() + 15000)}
+  }]}));
+
+</script>
+
+</body>
+</html>
